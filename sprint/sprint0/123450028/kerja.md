@@ -4,7 +4,7 @@
 
 \## Selesai
 
-Pada Sprint 0 ini, saya telah menyetujui Aturan dan Ketentuan Capstone, memilih komponen Transformer encoder atas patch dengan tugas sampingan sebagai Koordinator, serta mengisi Kontrak Tim bersama anggota tim hingga seluruh bagiannya terisi. Saya juga telah memasang lingkungan Python dan PyTorch serta menjalankan starter dari dosen hingga tahap permuatan data.
+Pada Sprint 0 ini, saya telah menyetujui Aturan dan Ketentuan Capstone, memilih komponen Transformer encoder atas patch dengan tugas sampingan sebagai Koordinator, serta mengisi Kontrak Tim bersama anggota tim hingga seluruh bagiannya terisi. Saya juga telah memasang lingkungan Python dan PyTorch serta menjalankan starter dari dosen hingga tahap pemuatan data.
 
 
 
