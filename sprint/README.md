@@ -1,3 +1,5 @@
-# Catatan sprint (opsional)
+# Log Sprint 0 — 123450120
 
-Log Sprint resmi ditulis di Workbench (Papan Tim). Folder ini untuk catatan kerja per sprint per anggota: `sprint/<nama-sprint>/<nim>.md`.
+- **Selesai:** Menyetujui aturan Capstone, memilih model CNN (Modul 05) dan peran Reproduksi & Demo, clone repositori tim ke laptop, membuat branch 123450120/kerja, serta menyiapkan repositori lokal.
+- **Berikutnya:** Menyiapkan arsitektur dasar model CNN untuk klasifikasi 10 angka isyarat BISINDO, menjalankan starter code evaluasi, dan menyiapkan skrip otomatis reproduksi tim.
+- **Hambatan:** Tidak ada hambatan dalam persiapan Sprint 0.
