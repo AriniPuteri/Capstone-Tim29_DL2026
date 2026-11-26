@@ -1,5 +1,14 @@
 {
-  "sumber": "https://… (tautan dataset dari kartu Kasus tim di Workbench)",
-  "berkas": ["data/latih.csv"],
-  "catatan": "Isi pada Sprint 0: versi/tanggal unduh, jumlah baris, dan perubahan (bila ada). Berkas data sendiri tidak di-commit."
+  "sumber": "Meja 5 Volt Ruang Cerdas \u2014 Tim 29 (sesi-20261118-140239 & sesi-20261118-145349)",
+  "berkas": [
+    "data/label.csv",
+    "data/periksa-isyarat.csv",
+    "data/imu.csv",
+    "data/daya.csv",
+    "data/lingkungan.csv",
+    "data/aktuator.csv",
+    "data/digital.csv",
+    "data/sesi_meja_tim29.npz"
+  ],
+  "catatan": "versi 2026-11-18 gabungan 240 kondisi (no 1-180 dari sesi-20261118-140239, no 181-240 dari sesi-20261118-145349), 8 partisipan x 30 kondisi"
 }
