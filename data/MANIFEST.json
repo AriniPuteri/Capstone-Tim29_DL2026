@@ -1,5 +1,5 @@
 {
-  "sumber": "Meja 5 Volt Ruang Cerdas \u2014 Tim 29 (sesi-20261118-140239 & sesi-20261118-145349)",
+  "sumber": "Meja 5 Volt Ruang Cerdas — Tim 29 (sesi-20261118-140239 & sesi-20261118-145349)",
   "berkas": [
     "data/label.csv",
     "data/periksa-isyarat.csv",
@@ -10,5 +10,6 @@
     "data/digital.csv",
     "data/sesi_meja_tim29.npz"
   ],
-  "catatan": "versi 2026-11-18 gabungan 240 kondisi (no 1-180 dari sesi-20261118-140239, no 181-240 dari sesi-20261118-145349), 8 partisipan x 30 kondisi"
+  "catatan": "versi 2026-11-18 gabungan 240 kondisi (no 1-180 dari sesi-20261118-140239, no 181-240 dari sesi-20261118-145349), 8 partisipan x 30 kondisi",
+  "data_hash": "ae2d32d20853f4a7da7879017cde3d1c"
 }
