@@ -14,4 +14,4 @@ Diisi Penjaga Data & Evaluasi (`123450111` — Zailani Satria), digabung ke `mai
 | Praproses yang sama untuk semua model | Sampling citra `640×480` selama 3 detik per kondisi; **buang 1 detik pertama setiap kondisi**, ambil jendela aktif (`63` fitur citra spasial-gradien per frame aktif); normalisasi Z-score dihitung **dari data latih saja** |
 | Anggaran komputasi per run | ≤ 20 menit CPU laptop |
 | Evaluasi data uji | Sekali, oleh Penjaga Data, pada sprint terakhir (`--final`) |
-| `data_hash` saat dibekukan | `ce33052f74683c8d40c94c758a3cda61` (dihitung dari `data/MANIFEST.json`) |
+| `data_hash` saat dibekukan | `ae2d32d20853f4a7da7879017cde3d1c` (dihitung dari `data/MANIFEST.json`) |
