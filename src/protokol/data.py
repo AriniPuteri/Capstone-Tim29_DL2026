@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 import numpy as np
 from src.common import manifest, split
 from src.protokol.pemotong_jendela import (
@@ -22,27 +22,28 @@ def _normalisasi_latih_saja(X_train: np.ndarray, X_val: np.ndarray, X_test: np.n
 
 def muat():
     _ = manifest.baca()
-    berkas_primer = manifest.AKAR / "data" / "sesi_meja_13nov.npz"
-    berkas = (
-        berkas_primer
-        if berkas_primer.exists()
-        else buat_sesi_simulasi(manifest.AKAR / "data" / "simulasi_t29", seed=split.SEED_SPLIT)
-    )
-    d = np.load(berkas)
-    landmarks_mentah = d["landmarks"]
-    y = d["angka"].astype(np.int64)
-    pid = d["partisipan"].astype(np.int64)
-    tangan_kiri = d["tangan_kiri"].astype(bool)
-
-    X = np.asarray(
-        [
-            potong_jendela_kondisi(landmarks_mentah[i], adalah_tangan_kiri=bool(tangan_kiri[i]))[0].reshape(
-                PANJANG_JENDELA, -1
-            )
-            for i in range(len(landmarks_mentah))
-        ],
-        dtype=np.float32,
-    )
+    berkas_primer = manifest.AKAR / "data" / "sesi_meja_tim29.npz"
+    if berkas_primer.exists():
+        d = np.load(berkas_primer)
+        X = d["X"].astype(np.float32)
+        y = d["angka"].astype(np.int64)
+        pid = d["partisipan"].astype(np.int64)
+    else:
+        berkas_sim = buat_sesi_simulasi(manifest.AKAR / "data" / "simulasi_t29", seed=split.SEED_SPLIT)
+        d = np.load(berkas_sim)
+        landmarks_mentah = d["landmarks"]
+        y = d["angka"].astype(np.int64)
+        pid = d["partisipan"].astype(np.int64)
+        tangan_kiri = d["tangan_kiri"].astype(bool)
+        X = np.asarray(
+            [
+                potong_jendela_kondisi(landmarks_mentah[i], adalah_tangan_kiri=bool(tangan_kiri[i]))[0].reshape(
+                    PANJANG_JENDELA, -1
+                )
+                for i in range(len(landmarks_mentah))
+            ],
+            dtype=np.float32,
+        )
 
     mask_train, mask_val, mask_test = (pid <= 5), (pid == 6), (pid == 7)
     pid_train = set(pid[mask_train].tolist())

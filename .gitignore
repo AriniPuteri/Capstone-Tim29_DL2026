@@ -8,3 +8,7 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 # prediksi boleh di-commit (kecil); checkpoint model tidak
+
+data/arsip_mentah/
+data/sesi_mentah/
+data/simulasi_t29/
