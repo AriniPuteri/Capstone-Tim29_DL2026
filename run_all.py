@@ -17,7 +17,7 @@ from pathlib import Path
 
 AKAR = Path(__file__).resolve().parent
 
-# Windows: penilai (src.common.evaluate) mencetak "→"; paksa UTF-8 supaya tidak gagal di cp1252.
+# Windows: penilai (src.common.evaluate) mencetak panah UTF-8; paksa UTF-8 supaya tidak gagal di cp1252.
 # src/common tidak diubah; env ini diwariskan ke semua subprocess anak, dan stdout disetel UTF-8.
 os.environ.setdefault("PYTHONIOENCODING", "utf-8")
 try:
@@ -57,7 +57,7 @@ def main() -> None:
     bl = AKAR / "results" / "baseline" / "metrics.json"
     if bl.exists():
         h = json.loads(bl.read_text("utf-8")); mt = h["metrik"]
-        baris.append(f"| baseline | mlp dosen | {h['seed']} | {mt['val_acc']:.4f} | {mt['val_macro_f1']:.4f} | — | {h.get('durasi_detik', 0):.0f} | {h.get('perangkat', '')} |")
+        baris.append(f"| baseline | mlp dosen | {h['seed']} | {mt['val_acc']:.4f} | {mt['val_macro_f1']:.4f} | â€” | {h.get('durasi_detik', 0):.0f} | {h.get('perangkat', '')} |")
     for nim, daftar in ringkas.items():
         for h in daftar:
             mt = h["metrik"]
@@ -66,8 +66,9 @@ def main() -> None:
     (AKAR / "reports").mkdir(exist_ok=True)
     out = AKAR / "reports" / "hasil_komparasi.md"
     out.write_text("# Hasil komparasi (dibangkitkan run_all.py)\n\n" + "\n".join(baris) + "\n", encoding="utf-8")
-    print("tabel komparasi →", out.relative_to(AKAR))
+    print("tabel komparasi ->", out.relative_to(AKAR))
 
 
 if __name__ == "__main__":
     main()
+

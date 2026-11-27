@@ -1,5 +1,15 @@
 {
-  "sumber": "data simulasi untuk backlog #7 (run_all.py pada data simulasi); ganti dengan tautan dataset kartu Kasus tim di Workbench setelah data primer diterima",
-  "berkas": ["data/latih.csv"],
-  "catatan": "data/latih.csv tidak di-commit. Bila tidak ada, src.protokol.data.muat() membangkitkan dataset sintetis deterministik (seed 2026, 400 contoh, 21 fitur, 10 kelas) untuk menguji jalur evaluasi. Bila data primer meja sudah ada di data/latih.csv (CSV header f0..fN,target), berkas itu dipakai dan data_hash dihitung dari isinya. Catat versi/tanggal unduh dan perubahan (bila ada)."
+  "sumber": "Meja 5 Volt Ruang Cerdas — Tim 29 (sesi-20261118-140239 & sesi-20261118-145349)",
+  "berkas": [
+    "data/label.csv",
+    "data/periksa-isyarat.csv",
+    "data/imu.csv",
+    "data/daya.csv",
+    "data/lingkungan.csv",
+    "data/aktuator.csv",
+    "data/digital.csv",
+    "data/sesi_meja_tim29.npz"
+  ],
+  "catatan": "versi 2026-11-18 gabungan 240 kondisi (no 1-180 dari sesi-20261118-140239, no 181-240 dari sesi-20261118-145349), 8 partisipan x 30 kondisi",
+  "data_hash": "ae2d32d20853f4a7da7879017cde3d1c"
 }

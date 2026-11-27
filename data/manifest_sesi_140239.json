@@ -1,0 +1,43 @@
+{
+  "versi_perekam": "1.13",
+  "tim": 29,
+  "judul": "Pengenalan angka bahasa isyarat (BISINDO 0–9)",
+  "simulasi": false,
+  "dibuat": "2026-11-18T14:42:48.254",
+  "host": "sditera-civ",
+  "python": "3.12.3",
+  "berkas": {
+    "aktuator.csv": {
+      "sha256": "4e65658a12405da2b6d6100b8cbacb4914c0662c461e137cdf9baac1af6cb739",
+      "bytes": 15576
+    },
+    "daya.csv": {
+      "sha256": "f90c3a126e76ff7b3a2c7b413425e712931f24e720ca0a19bc296bdf241ae62c",
+      "bytes": 4180536
+    },
+    "digital.csv": {
+      "sha256": "29a4113bb9b714ef297022123c0e24ef886428d81d39c7920c1f2d81e5ca25bd",
+      "bytes": 28
+    },
+    "imu.csv": {
+      "sha256": "7f3146991280f255d94a5e75cdc1fef9317212fd01f086e429f3f8795e8d2628",
+      "bytes": 10767164
+    },
+    "label.csv": {
+      "sha256": "b3d57072c11ece9809b48bf3ca4fb205b406c36d8251029402cdd8854a57db19",
+      "bytes": 20651
+    },
+    "lingkungan.csv": {
+      "sha256": "0f750cb90f4896272b15faaf55fb7614a60c0d5b59cb05de8689421ef2f747a3",
+      "bytes": 22654
+    },
+    "log.txt": {
+      "sha256": "3d8ed6c43182ddd2d48abe4e392dacb37169cc9e79e538ecce95cadd67082fa3",
+      "bytes": 4157
+    },
+    "rencana.yaml": {
+      "sha256": "ebb468686df195988cb58af0b9a83f1b81f0a008ff1a479fcb2b63e4c71e0806",
+      "bytes": 1085
+    }
+  }
+}
