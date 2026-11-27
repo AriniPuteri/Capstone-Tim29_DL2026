@@ -6,15 +6,6 @@ Aturan (panduan tim 4.1 no. 5–7): sumber gambar harus jelas dan dicantumkan di
 memungkinkan diperiksa penutur BISINDO. Kartu dipakai untuk pengarahan dan latihan ±5 menit,
 dan TIDAK ditunjukkan selama kondisi berlangsung.
 
-Peringatan:
-- BISINDO bukan SIBI. Banyak makalah klasifikasi "angka isyarat" memakai SIBI (isyarat resmi, satu
-  tangan). Jangan ambil kartu dari sumber SIBI.
-- BISINDO punya variasi antardaerah. Pilih SATU sumber/dialek untuk semua 10 kartu dan catat
-  dialeknya, supaya semua partisipan memeragakan isyarat yang sama.
-- Tuliskan kartu dari sumber yang memberi izin pemakaian; jangan menyalin gambar tanpa izin.
-  Alternatif: minta penutur BISINDO (mis. Pusbisindo/Gerkatin daerah setempat) memeragakan dan
-  difoto/digambar ulang oleh tim, dengan izin tertulis.
-
 | Angka | Berkas kartu | Sumber | Dialek | Diperiksa penutur BISINDO | Catatan |
 |---|---|---|---|---|---|
 | 0 | foto angka 0 pada Gambar 3.2 | Ilmi & Suryoprayogo (2022), Gambar 3.2 | isyarat angka dataset Turki (bukan BISINDO) | tidak | dipakai saat sesi 13 Nov |
