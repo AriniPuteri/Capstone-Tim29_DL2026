@@ -10,11 +10,20 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
 AKAR = Path(__file__).resolve().parent
+
+# Windows: penilai (src.common.evaluate) mencetak panah UTF-8; paksa UTF-8 supaya tidak error cp1252.
+# src/common tidak diubah; env ini diwariskan ke subprocess anak, dan stdout disetel UTF-8.
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+try:
+    sys.stdout.reconfigure(encoding="utf-8")  # type: ignore[attr-defined]
+except (AttributeError, ValueError):
+    pass
 
 
 def jalankan(perintah: list[str]) -> None:
@@ -31,7 +40,7 @@ def main() -> None:
     a = ap.parse_args()
 
     if not a.tanpa_baseline:
-        jalankan([sys.executable, "-m", "src.common.baseline_mlp", "--seed", str(a.seeds[0])])
+        jalankan([sys.executable, "-m", "src.common.baseline", "--seed", str(a.seeds[0])])
     anggota = sorted(p for p in (AKAR / "models").iterdir() if p.is_dir() and (p / "run.py").exists()
                      and p.name != "TEMPLATE" and (a.hanya is None or p.name in a.hanya))
     ringkas: dict[str, list[dict]] = {}
