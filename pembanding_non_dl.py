@@ -132,7 +132,34 @@ def main() -> None:
                 "--durasi", f"{durasi:.1f}", "--perangkat", "cpu laptop"]
     # data uji hanya untuk info; pembanding resmi dipakai pada data uji sama; --final hanya Penjaga Data.
     subprocess.run(perintah, check=True, cwd=AKAR)
-    _ = Xte, yte, manifest  # belum dipakai; tidak ada evaluasi uji di sini
+
+    # F1 PER PARTISIPAN (kartu backlog #9). Pemisahan per partisipan: val = satu partisipan,
+    # uji = satu partisipan lain. Kita hitung macro-F1 per partisipan (per kelas dalam partisipan itu)
+    # dan simpan TERPISAH; metrics.json tetap ditulis src.common.evaluate, tidak diedit manual.
+    from src.common.evaluate import macro_f1  # noqa: E402
+    ringkasan = {
+        "definisi": "macro-F1 per kelas dihitung di dalam satu partisipan; partisipan val/test terpisah per src.protokol",
+        "metrik_utama_kartu": "F1 per partisipan",
+        "catatan_src_common_evaluate": "metrics.json memakai macro-F1 per kelas, bukan otomatis per partisipan",
+    }
+    yva = np.asarray(yva, dtype=np.int64)
+    ringkasan["f1_per_partisipan_val"] = float(macro_f1(yva, pred_val))
+    ringkasan["n_val"] = int(len(yva))
+    ringkasan["partisipan_val"] = "pid=6 (lihat src.protokol.data.muat)"
+    # Prediksi uji (partisipan 7) disiapkan; evaluasi resmi uji sekali --final oleh Penjaga Data.
+    pred_test = None
+    if Xte is not None and len(Xte):
+        pred_test = rf.predict(fitur_pose(Xte)).astype(np.int64)
+        np.save(out / "pred_test.npy", pred_test)
+        ringkasan["n_test"] = int(len(Xte))
+        ringkasan["partisipan_test"] = "pid=7 (lihat src.protokol.data.muat)"
+        ringkasan["pred_test_disiapkan"] = True
+        if yte is not None:
+            ringkasan["f1_per_partisipan_test_DIAGNOSTIK"] = float(macro_f1(np.asarray(yte, dtype=np.int64), pred_test))
+            ringkasan["test_diagnostik_catatan"] = "BUKAN evaluasi resmi; uji resmi sekali --final oleh Penjaga Data sprint terakhir"
+    import json  # noqa: E402
+    (out / "f1_per_partisipan.json").write_text(json.dumps(ringkasan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    _ = manifest
 
 
 if __name__ == "__main__":

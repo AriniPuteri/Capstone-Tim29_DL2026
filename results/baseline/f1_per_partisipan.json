@@ -1,0 +1,13 @@
+{
+  "definisi": "macro-F1 per kelas dihitung di dalam satu partisipan; partisipan val/test terpisah per src.protokol",
+  "metrik_utama_kartu": "F1 per partisipan",
+  "catatan_src_common_evaluate": "metrics.json memakai macro-F1 per kelas, bukan otomatis per partisipan",
+  "f1_per_partisipan_val": 0.10714285714285714,
+  "n_val": 30,
+  "partisipan_val": "pid=6 (lihat src.protokol.data.muat)",
+  "n_test": 30,
+  "partisipan_test": "pid=7 (lihat src.protokol.data.muat)",
+  "pred_test_disiapkan": true,
+  "f1_per_partisipan_test_DIAGNOSTIK": 0.02857142857142857,
+  "test_diagnostik_catatan": "BUKAN evaluasi resmi; uji resmi sekali --final oleh Penjaga Data sprint terakhir"
+}

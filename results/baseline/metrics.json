@@ -9,5 +9,5 @@
   "model": "baseline_non_dl",
   "n_val": 30,
   "n_test": 0,
-  "durasi_detik": 0.8
+  "durasi_detik": 1.2
 }
